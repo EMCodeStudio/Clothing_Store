@@ -1,0 +1,22 @@
+{
+  "name": "clothing_store",
+  "version": "1.0.0",
+  "description": "- npm -v: 10.2.1\r - node -v: v20.19.0\r - nvm -v: v1.1.11",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "start": "node Apps/Server/src/index.js"
+  },
+  "workspaces": [
+    "Apps/*"
+  ],
+  "keywords": [],
+  "author": "EMCodev",
+  "license": "ISC",
+  "devDependencies": {
+    "turbo": "^1.10.16"
+  }
+}
