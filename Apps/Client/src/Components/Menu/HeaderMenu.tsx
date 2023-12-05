@@ -22,55 +22,21 @@ import { MantineLogo } from '@mantinex/mantine-logo';
 import { useDisclosure } from '@mantine/hooks';
 
 import {
-    IconNotification,
-    IconCode,
-    IconBook,
-    IconChartPie3,
-    IconFingerprint,
-    IconCoin,
     IconChevronDown,
 } from '@tabler/icons-react';
 
-import classes from './HeaderMegaMenu.module.css';
+import { Autocomplete } from '@mantine/core';
+import { IconSearch } from '@tabler/icons-react';
 
-const mockdata = [
-    {
-        icon: IconCode,
-        title: 'Open source',
-        description: 'This Pokémon’s cry is very loud and distracting',
-    },
-    {
-        icon: IconCoin,
-        title: 'Free for everyone',
-        description: 'The fluid of Smeargle’s tail secretions changes',
-    },
-    {
-        icon: IconBook,
-        title: 'Documentation',
-        description: 'Yanma is capable of seeing 360 degrees without',
-    },
-    {
-        icon: IconFingerprint,
-        title: 'Security',
-        description: 'The shell’s rounded shape and the grooves on its.',
-    },
-    {
-        icon: IconChartPie3,
-        title: 'Analytics',
-        description: 'This Pokémon uses its flying ability to quickly chase',
-    },
-    {
-        icon: IconNotification,
-        title: 'Notifications',
-        description: 'Combusken battles with the intensely hot flames it spews',
-    },
-];
+import classes from './HeaderMegaMenu.module.css';
+import { mockdata } from './MenuData';
 
 export function HeaderMegaMenu() {
 
     const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
     const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
     const theme = useMantineTheme();
+
 
     const links = mockdata.map((item) => (
         <UnstyledButton className={classes.subLink} key={item.title}>
@@ -90,6 +56,7 @@ export function HeaderMegaMenu() {
         </UnstyledButton>
     ));
 
+
     return (
 
         <Box pb={120}>
@@ -106,7 +73,7 @@ export function HeaderMegaMenu() {
                                 <a href="#" className={classes.link}>
                                     <Center inline>
                                         <Box component="span" mr={5}>
-                                            Ropa
+                                            Moda
                                         </Box>
                                         <IconChevronDown
                                             style={{ width: rem(16), height: rem(16) }}
@@ -120,7 +87,7 @@ export function HeaderMegaMenu() {
                                 <Group justify="space-between" px="md">
                                     <Text fw={500}>Nuestras Categorias</Text>
                                     <Anchor href="#" fz="xs">
-                                        Ver Todo
+                                        Explorar Mas
                                     </Anchor>
                                 </Group>
 
@@ -134,13 +101,13 @@ export function HeaderMegaMenu() {
                                     <Group justify="space-between">
                                         <div>
                                             <Text fw={500} fz="sm">
-                                                Get started
+                                                Contactanos
                                             </Text>
                                             <Text size="xs" c="dimmed">
-                                                Their food sources have decreased, and their numbers
+                                                Informacion de Contacto y Asesorias
                                             </Text>
                                         </div>
-                                        <Button variant="default">Get started</Button>
+                                        <Button variant="default">Ver Contacto</Button>
                                     </Group>
                                 </div>
                             </HoverCard.Dropdown>
@@ -149,14 +116,22 @@ export function HeaderMegaMenu() {
                             Ofertas
                         </a>
                         <a href="#" className={classes.link}>
-                            PQR
+                            Ayuda / PQR
                         </a>
                     </Group>
 
-                    <Group visibleFrom="sm">
-                        <Button variant="default">Iniciar Sesion</Button>
-                        <Button>Crear Cuenta</Button>
-                    </Group>
+                {/*     <Group visibleFrom="sm"> */}
+                {/*         <Button variant="default">Iniciar Sesion</Button> */}
+                {/*         <Button>Crear Cuenta</Button> */}
+                {/*     </Group> */}
+
+                    <Autocomplete
+                        className={classes.search}
+                        placeholder="Search"
+                        leftSection={<IconSearch style={{ width: rem(16), height: rem(16) }} stroke={1.5} />}
+                        data={['Traje', 'Pantalon']}
+                        visibleFrom="xs"
+                    />
 
                     <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
                 </Group>
@@ -171,16 +146,21 @@ export function HeaderMegaMenu() {
                 hiddenFrom="sm"
                 zIndex={1000000}
             >
+
+
+
+
+
                 <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
                     <Divider my="sm" />
 
                     <a href="#" className={classes.link}>
-                        Home
+                        Inicio
                     </a>
                     <UnstyledButton className={classes.link} onClick={toggleLinks}>
                         <Center inline>
                             <Box component="span" mr={5}>
-                                Features
+                                Moda
                             </Box>
                             <IconChevronDown
                                 style={{ width: rem(16), height: rem(16) }}
@@ -190,10 +170,10 @@ export function HeaderMegaMenu() {
                     </UnstyledButton>
                     <Collapse in={linksOpened}>{links}</Collapse>
                     <a href="#" className={classes.link}>
-                        Learn
+                        Ofertas
                     </a>
                     <a href="#" className={classes.link}>
-                        Academy
+                        Ayuda / PQR
                     </a>
 
                     <Divider my="sm" />
@@ -203,6 +183,9 @@ export function HeaderMegaMenu() {
                         <Button>Crear Cuenta</Button>
                     </Group>
                 </ScrollArea>
+
+
+
             </Drawer>
         </Box>
 
