@@ -101,5 +101,22 @@
 ## Commands
 
 - npm run dev
+- npm run dev --workspace client
+- npm run dev --workspace server
 - npm run build
 - npm start
+
+## CLIENT DEVELOTMENT
+
+### LIBS
+
+- npm i sass@latest --workspace client
+- npm i @mantine/core @mantine/hooks --workspace client
+- npm i @mantinex/mantine-logo --workspace client
+- npm i @mantine/core/styles.css --workspace client
+- npm i @tabler/icons-react --workspace client
+- npm install --save-dev postcss postcss-preset-mantine postcss-simple-vars --workspace client
+
+### STEPS
+
+1) Navbar Menu
