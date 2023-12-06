@@ -1,7 +1,7 @@
 import { rem, useMantineTheme } from "@mantine/core"
 import { IconHeart, IconShoppingCart } from "@tabler/icons-react"
-import { CartButton, FavoriteButton } from "../Styled/Buttons/FavoriteCartButtons"
-import './MenuStyle.scss' 
+import { CartButton, FavoriteButton } from "../../Styled/Buttons/FavoriteCartButtons"
+import '../MenuStyle.scss' 
 
 const FavoriteCartOptions = () => {
 

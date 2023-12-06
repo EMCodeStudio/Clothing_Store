@@ -20,9 +20,9 @@ import {
     IconTrash,
     IconSwitchHorizontal,
 } from '@tabler/icons-react';
-import classes from './HeaderMegaMenu.module.css';
+import classes from '../HeaderMegaMenu.module.css';
 
-import { user } from './MenuData/UserData';
+import { user } from '../MenuData/UserData';
 import { useState } from 'react';
 
 function ProfileOptions() {

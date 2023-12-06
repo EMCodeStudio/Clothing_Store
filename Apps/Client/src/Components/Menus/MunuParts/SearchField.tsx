@@ -4,7 +4,7 @@ import {
 } from '@mantine/core';
 import { Autocomplete } from '@mantine/core';
 import { IconSearch } from '@tabler/icons-react';
-import classes from './HeaderMegaMenu.module.css';
+import classes from '../HeaderMegaMenu.module.css';
 
 function SearchField() {
     return (
