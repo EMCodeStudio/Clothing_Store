@@ -13,17 +13,18 @@ import {
     IconChevronDown,
     IconLogout,
     IconHeart,
-    IconStar,
     IconMessage,
     IconSettings,
-    IconPlayerPause,
-    IconTrash,
-    IconSwitchHorizontal,
+    IconUser,
+    IconTruck,
 } from '@tabler/icons-react';
 import classes from '../HeaderMegaMenu.module.css';
 
 import { user } from '../MenuData/UserData';
 import { useState } from 'react';
+import '../MenuStyle.scss'
+
+//const baseClassProfile = 'container-profile'
 
 function ProfileOptions() {
 
@@ -33,16 +34,17 @@ function ProfileOptions() {
 
     return (
         <>
-
             <Menu
+                //    className={`${baseClassProfile}__fix-position`}
+                zIndex={1000000}
                 width={260}
-                position="bottom-end"
+                position="bottom-start"
                 transitionProps={{ transition: 'pop-top-right' }}
                 onClose={() => setUserMenuOpened(false)}
                 onOpen={() => setUserMenuOpened(true)}
                 withinPortal
             >
-                <Menu.Target>
+                <Menu.Target >
                     <UnstyledButton
                         className={cx(classes.user, { [classes.userActive]: userMenuOpened })}
                     >
@@ -56,6 +58,7 @@ function ProfileOptions() {
                     </UnstyledButton>
                 </Menu.Target>
                 <Menu.Dropdown>
+                    <Menu.Label>Web</Menu.Label>
                     <Menu.Item
                         leftSection={
                             <IconHeart
@@ -65,18 +68,18 @@ function ProfileOptions() {
                             />
                         }
                     >
-                        Liked posts
+                        Mis Favoritos
                     </Menu.Item>
                     <Menu.Item
                         leftSection={
-                            <IconStar
+                            <IconTruck
                                 style={{ width: rem(16), height: rem(16) }}
-                                color={theme.colors.yellow[6]}
+                                color={theme.colors.green[6]}
                                 stroke={1.5}
                             />
                         }
                     >
-                        Saved posts
+                        Mis Compras
                     </Menu.Item>
                     <Menu.Item
                         leftSection={
@@ -87,47 +90,35 @@ function ProfileOptions() {
                             />
                         }
                     >
-                        Your comments
+                        Mis Comentarios
                     </Menu.Item>
-                    <Menu.Label>Settings</Menu.Label>
+                    <Menu.Label>Ajustes</Menu.Label>
+                    <Menu.Item
+                        leftSection={
+                            <IconUser style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
+                        }
+                    >
+                        Editar Perfil
+                    </Menu.Item>
                     <Menu.Item
                         leftSection={
                             <IconSettings style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
                         }
                     >
-                        Account settings
+                        Configurar Cuenta
                     </Menu.Item>
-                    <Menu.Item
-                        leftSection={
-                            <IconSwitchHorizontal style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
-                        }
-                    >
-                        Change account
-                    </Menu.Item>
+                    <Menu.Divider />
+                    <Menu.Label>Otros</Menu.Label>
                     <Menu.Item
                         leftSection={
                             <IconLogout style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
                         }
                     >
-                        Logout
+                        Cerrar Sesion
                     </Menu.Item>
-                    <Menu.Divider />
-                    <Menu.Label>Danger zone</Menu.Label>
-                    <Menu.Item
-                        leftSection={
-                            <IconPlayerPause style={{ width: rem(16), height: rem(16) }} stroke={1.5} />
-                        }
-                    >
-                        Pause subscription
-                    </Menu.Item>
-                    <Menu.Item
-                        color="red"
-                        leftSection={<IconTrash style={{ width: rem(16), height: rem(16) }} stroke={1.5} />}
-                    >
-                        Delete account
-                    </Menu.Item>
+
                 </Menu.Dropdown>
-            </Menu>
+            </Menu >
         </>
     )
 }

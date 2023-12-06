@@ -6,15 +6,15 @@ const ButtonIcon = styled.button`
 width:28px;
 height:28px;
 margin: auto;
-padding-top: 4px;
+padding-top: 3px;
 justify-content: center;
 align-items: center;
 border-radius: 50%;
 cursor: pointer;
 border-style: none;
-
+background-color: ${Colors.bg_aliceblue};
 &:hover{
-    background-color: ${Colors.bg_aliceblue};
+    background-color: ${Colors.white};
 }
 `
 

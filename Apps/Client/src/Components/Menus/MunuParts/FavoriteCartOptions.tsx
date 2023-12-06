@@ -1,5 +1,5 @@
 import { rem, useMantineTheme } from "@mantine/core"
-import { IconHeart, IconShoppingCart } from "@tabler/icons-react"
+import { IconBell, IconShoppingCart } from "@tabler/icons-react"
 import { CartButton, FavoriteButton } from "../../Styled/Buttons/FavoriteCartButtons"
 import '../MenuStyle.scss' 
 
@@ -13,18 +13,18 @@ const FavoriteCartOptions = () => {
       <div className="row-icons">
 
         <FavoriteButton>
-          <IconHeart
-            style={{ width: rem(16), height: rem(16) }}
-            color={theme.colors.red[6]}
-            stroke={3}
+          <IconBell
+            style={{ width: rem(18), height: rem(21) }}
+            color={theme.colors.yellow[6]}
+            stroke={2}
           />
         </FavoriteButton>
 
         <CartButton>
           <IconShoppingCart
-            style={{ width: rem(16), height: rem(16) }}
+            style={{ width: rem(18), height: rem(21) }}
             color={theme.colors.blue[6]}
-            stroke={3}
+            stroke={2}
           />
         </CartButton>
 

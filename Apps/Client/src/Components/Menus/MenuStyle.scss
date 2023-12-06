@@ -1,11 +1,17 @@
 .container-icons {
-
-    background-color: antiquewhite;
-    width: 5%;
-
+    // background-color: antiquewhite;
+    margin-right: 18px;
+    width: 7%;
     .row-icons {
-        gap: 10px;
-        background-color: olivedrab;
-
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        // background-color: olive
+        // color: rgb(164, 225, 255);
     }
 }
+
+/*  */
+/* .container-profile { */
+/*     &__fix-position {} */
+/* } */

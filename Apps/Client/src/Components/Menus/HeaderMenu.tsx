@@ -27,18 +27,30 @@ export function HeaderMegaMenu() {
         <Box pb={120}>
             <header className={classes.header}>
                 <Group justify="space-between" h="100%">
-                    
+
                     <MantineLogo size={30} />
+
                     <Group h="100%" gap={0} visibleFrom="sm">
                         <MenuOptionsOne />
                     </Group>
 
-                    <SearchField />
-                    <ProfileOptions />
-                    <Group visibleFrom="sm">
-                        <LoginButtons />
+                    <Group >
+                        <SearchField />
                     </Group>
-                    <FavoriteCartOptions />
+
+                    <Group visibleFrom='sm' >
+                        <ProfileOptions />
+                    </Group>
+
+                    {/*   <Group visibleFrom="sm"> */}
+                    {/*       <LoginButtons /> */}
+                    {/*   </Group> */}
+
+
+                    <Group visibleFrom='sm' >
+                        <FavoriteCartOptions />
+                    </Group>
+
 
                     <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
 
@@ -50,7 +62,7 @@ export function HeaderMegaMenu() {
                 onClose={closeDrawer}
                 size="100%"
                 padding="md"
-                title="Navigation"
+                title="Menu de Navegacion"
                 hiddenFrom="sm"
                 zIndex={1000000}
             >
@@ -61,8 +73,15 @@ export function HeaderMegaMenu() {
                     <Divider my="sm" />
 
                     <Group justify="center" grow pb="xl" px="md">
-                        <LoginButtons />
+                        <ProfileOptions />
                     </Group>
+                    {/*   <Group justify="center" grow pb="xl" px="md"> */}
+                    {/*       <SearchField /> */}
+                    {/*   </Group> */}
+
+                    {/*   <Group justify="center" grow pb="xl" px="md"> */}
+                    {/*       <LoginButtons /> */}
+                    {/*   </Group> */}
 
                 </ScrollArea>
 
