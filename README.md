@@ -1,6 +1,6 @@
 # CLOTHING STORE
 
-## author: Estiven MC
+## author: EMCodev
 
 ## <estivenmorelos@hotmail.com>
 
@@ -111,12 +111,21 @@
 ### LIBS
 
 - npm i sass@latest --workspace client
+- npm i styled-components --workspace client
 - npm i @mantine/core @mantine/hooks --workspace client
-- npm i @mantinex/mantine-logo --workspace client
 - npm i @mantine/core/styles.css --workspace client
 - npm i @tabler/icons-react --workspace client
 - npm install --save-dev postcss postcss-preset-mantine postcss-simple-vars --workspace client
+- npm i @mantinex/mantine-logo --workspace client
 
 ### STEPS
 
 1) Navbar Menu
+
+- Logo
+- Menu Options
+- Search Field
+- Profile Options
+- Social Icons Links
+- Favorite and Cart Icons Options
+- Login Options
