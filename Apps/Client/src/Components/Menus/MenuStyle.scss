@@ -1,7 +1,14 @@
+header {
+    @media(max-width: 442px) {
+        border-bottom: none !important;
+    }
+}
+
 .container-icons {
     // background-color: antiquewhite;
     margin-right: 18px;
     width: 7%;
+
     .row-icons {
         display: flex;
         flex-direction: row;
