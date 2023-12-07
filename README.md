@@ -117,15 +117,22 @@
 - npm i @tabler/icons-react --workspace client
 - npm install --save-dev postcss postcss-preset-mantine postcss-simple-vars --workspace client
 - npm i @mantinex/mantine-logo --workspace client
+- npm i @shoelace-style/shoelace --workspace client
 
 ### STEPS
 
-1) Navbar Menu
+1) Header Menu
 
-- Logo
-- Menu Options
+- Logo *
+- Menu Options *
 - Search Field
-- Profile Options
+- Profile Options *
 - Social Icons Links
-- Favorite and Cart Icons Options
-- Login Options
+- Notifications and Cart Icons Options *
+- Login Button Options *
+
+2) Home Images Carousel
+
+- Add Images
+- Autoplay
+- Dragging Images

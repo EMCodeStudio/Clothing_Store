@@ -1,0 +1,17 @@
+.carousel-image {
+    color: rgba(0, 0, 255, 0.575);
+    cursor: grab;
+    max-height: 490px;
+
+    .carousel-item {
+        padding-top: 3px;
+        justify-content: start !important;
+        align-items: start !important;
+
+        img {
+            margin-top: 0;
+            max-height: 50vh;
+        }
+    }
+
+}
