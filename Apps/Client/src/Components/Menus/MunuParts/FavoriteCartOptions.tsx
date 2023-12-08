@@ -8,7 +8,7 @@ const FavoriteCartOptions = () => {
   const theme = useMantineTheme()
 
   return (
-    <div className="container-icons">
+    <div className="shop-container-icons">
 
       <div className="row-icons">
 

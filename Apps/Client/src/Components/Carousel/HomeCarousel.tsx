@@ -15,8 +15,8 @@ const HomeCarousel = () => {
         <>
 
             <SlCarousel
-                autoplayInterval={5000}
-                autoplay={false}
+                autoplayInterval={6000}
+                autoplay={true}
                 loop
                 navigation
                 pagination

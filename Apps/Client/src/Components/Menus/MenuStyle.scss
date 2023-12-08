@@ -1,22 +1,23 @@
+
+
 header {
     @media(max-width: 442px) {
         border-bottom: none !important;
     }
-}
+};
 
-.container-icons {
-    // background-color: antiquewhite;
+
+.shop-container-icons {
     margin-right: 18px;
     width: 7%;
-
     .row-icons {
         display: flex;
         flex-direction: row;
         gap: 15px;
-        // background-color: olive
-        // color: rgb(164, 225, 255);
     }
-}
+};
+
+
 
 .social-container {
     display: flex;
@@ -26,12 +27,39 @@ header {
     width: 100%;
     height: 50px;
 
-    .row-icons {
+    &__row-icons {
         display: flex;
         gap: 5px;
+        .facebook-icon {
+            transition: 0.4s all ease-out;
+            &:hover {
+                background-color: blue;
+                color: white;
+            }
+        }
+        .twitter-icon {
+            transition: 0.4s all ease-out;
+            &:hover {
+                background-color: aqua;
+                color: white;
+            }
+        }
+        .instagram-icon {
+            transition: 0.4s all ease-out;
+            &:hover {
+                background-color: purple;
+                color: white;
+            }
+        }
+        .youtube-icon {
+            transition: 0.4s all ease-out;
+            &:hover {
+                background-color: red;
+                color: white;
+            }
+        }
     }
-
-}
+};
 
 /*  */
 /* .container-profile { */

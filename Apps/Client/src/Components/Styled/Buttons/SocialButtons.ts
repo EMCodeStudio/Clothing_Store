@@ -7,7 +7,7 @@ const ButtonIcon = Styled.button`
 padding-right:15px;
 height:24px;
 width:24px;
-padding:    3px 0px 0px 0px;
+padding:    2px 0px 0px 0px;
 background-color: ${Colors.bg_aliceblue};
 border-radius: 50%;
 border: none;
