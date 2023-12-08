@@ -11,8 +11,8 @@ function App() {
     <>
       <MantineProvider>
         <HeaderMegaMenu />
+        <HomeCarousel />
       </MantineProvider>
-      <HomeCarousel />
     </>
 
   )

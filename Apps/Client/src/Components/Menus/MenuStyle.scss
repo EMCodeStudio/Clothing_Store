@@ -6,8 +6,6 @@ header {
     }
 }
 
-;
-
 .shop-container-icons {
     margin-right: 18px;
     width: 7%;
@@ -28,44 +26,33 @@ header {
     height: 50px;
 
     &__row-icons {
+        @mixin theme($theme: colors.$facebook) {
+            transition: 0.4s all ease-out;
+
+            &:hover {
+                background: $theme;
+                color: colors.$white;
+            }
+        }
 
         display: flex;
         gap: 6px;
 
         .facebook-icon {
-            transition: 0.4s all ease-out;
-
-            &:hover {
-                background-color: colors.$facebook;
-                color: colors.$white;
-            }
+            @include theme;
         }
 
         .twitter-icon {
-            transition: 0.4s all ease-out;
-
-            &:hover {
-                background-color: colors.$twitter;
-                color: colors.$white;
-            }
+            @include theme($theme: colors.$twitter);
         }
 
         .instagram-icon {
-            transition: 0.4s all ease-out;
-
-            &:hover {
-                background-color: colors.$instagram;
-                color: colors.$white;
-            }
+            @include theme($theme: colors.$instagram);
         }
 
         .youtube-icon {
-            transition: 0.4s all ease-out;
+            @include theme($theme: colors.$youtube);
 
-            &:hover {
-                background-color: colors.$youtube;
-                color: colors.$white;
-            }
         }
     }
 }
