@@ -73,7 +73,7 @@ const links = mockdata.map((item) => (
                                     Informacion de Contacto y Asesorias
                                 </Text>
                             </div>
-                            <Button variant="default">Ver Contacto</Button>
+                            <Button variant="default">Contacto</Button>
                         </Group>
                     </div>
                 </HoverCard.Dropdown>

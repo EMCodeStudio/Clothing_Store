@@ -18,7 +18,7 @@ export const mockdata = [
     {
         icon: IconCoin,
         title: 'Ropa Formal',
-        description: 'Generalmente se usa para matrimonios muy elegantes, eventos políticos y la ópera. ',
+        description: 'Generalmente se usa para matrimonios muy elegantes y destacar tambien en eventos políticos y la ópera. ',
     },
     {
         icon: IconBook,
@@ -28,7 +28,7 @@ export const mockdata = [
     {
         icon: IconFingerprint,
         title: 'Ropa Interior',
-        description: 'Ropa interior o ropa íntima es un término popular utilizado para ser portada bajo la ropa. ',
+        description: 'Ropa interior o ropa íntima es un término popular utilizado para ser portada bajo la ropa exterior. ',
     },
     {
         icon: IconChartPie3,

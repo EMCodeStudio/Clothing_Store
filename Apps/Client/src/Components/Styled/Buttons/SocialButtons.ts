@@ -1,5 +1,5 @@
 import Styled from "styled-components"
-import { Colors } from "../__Colors"
+import { Colors } from "../_Colors"
 
 
 
@@ -8,7 +8,7 @@ padding-right:15px;
 height:24px;
 width:24px;
 padding:    2px 0px 0px 0px;
-background-color: ${Colors.bg_aliceblue};
+background-color: ${Colors.bg_lightwhite};
 border-radius: 50%;
 border: none;
 cursor: pointer;

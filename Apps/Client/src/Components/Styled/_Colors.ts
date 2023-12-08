@@ -6,7 +6,9 @@ export const Colors: any = {
     white: 'white',
     bg_azure: 'rgb(164, 225, 255)',
     bg_aliceblue: 'aliceblue',
-    facebook: '#3b5998',
+    bg_lightwhite: '#bfdbff',
+    
+    facebook: '#1877f2',
     twitter: '#55acee',
     instagram: '#833AB4',
     youtube: ' #bb0000',

@@ -30,7 +30,7 @@ export function HeaderMegaMenu() {
            
            <SocialOptions/>
            
-            <Box mt={10} pb={75}>
+            <Box mt={10} pb={80}>
                 <header className={classes.header}>
                     <Group justify="space-between" h="100%">
                         <MantineLogo size={30} />

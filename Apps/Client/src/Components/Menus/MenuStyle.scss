@@ -1,67 +1,71 @@
-
+@use '../../sass/colors';
 
 header {
     @media(max-width: 442px) {
         border-bottom: none !important;
     }
-};
+}
 
+;
 
 .shop-container-icons {
     margin-right: 18px;
     width: 7%;
+
     .row-icons {
         display: flex;
         flex-direction: row;
         gap: 15px;
     }
-};
-
-
+}
 
 .social-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(51, 51, 182);
+    background-color: colors.$bg-primary;
     width: 100%;
     height: 50px;
 
     &__row-icons {
+
         display: flex;
-        gap: 5px;
+        gap: 6px;
+
         .facebook-icon {
             transition: 0.4s all ease-out;
+
             &:hover {
-                background-color: blue;
-                color: white;
+                background-color: colors.$facebook;
+                color: colors.$white;
             }
         }
+
         .twitter-icon {
             transition: 0.4s all ease-out;
+
             &:hover {
-                background-color: aqua;
-                color: white;
+                background-color: colors.$twitter;
+                color: colors.$white;
             }
         }
+
         .instagram-icon {
             transition: 0.4s all ease-out;
+
             &:hover {
-                background-color: purple;
-                color: white;
+                background-color: colors.$instagram;
+                color: colors.$white;
             }
         }
+
         .youtube-icon {
             transition: 0.4s all ease-out;
+
             &:hover {
-                background-color: red;
-                color: white;
+                background-color: colors.$youtube;
+                color: colors.$white;
             }
         }
     }
-};
-
-/*  */
-/* .container-profile { */
-/*     &__fix-position {} */
-/* } */
+}

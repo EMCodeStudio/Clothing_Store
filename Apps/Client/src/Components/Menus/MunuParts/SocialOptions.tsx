@@ -15,32 +15,28 @@ const SocialOptions = () => {
                     <FacebookIcon className="facebook-icon">
                         <IconBrandFacebookFilled
                             size={16}
-                            className='facebook'
                         />
                     </FacebookIcon >
                     <TwitterIcon className="twitter-icon">
                         <IconBrandTwitterFilled
-                         size={16}
-                         className='twitter'
-                         />
+                            size={16}
+
+                        />
                     </TwitterIcon>
                     <InstagramIcon className="instagram-icon">
                         <IconBrandInstagram
-                         size={16}
-                         className='instagram'
-                          />
+                            size={16}
+                        />
                     </InstagramIcon >
                     <YoutubeIcon
                         className="youtube-icon"
                      /*  style={{border: '1px solid red', backgroundColor: 'orange'}} */>
                         <IconBrandYoutubeFilled
-                        className='youtube'
-                         size={16} 
-                         />
+                            size={16}
+                        />
                     </YoutubeIcon>
                 </div>
             </div>
-
         </>
     )
 }

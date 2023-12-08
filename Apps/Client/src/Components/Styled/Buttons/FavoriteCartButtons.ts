@@ -1,6 +1,6 @@
 
 import styled from "styled-components";
-import { Colors } from "../__Colors";
+import { Colors } from "../_Colors";
 
 const ButtonIcon = styled.button`
 width:28px;
