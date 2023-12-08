@@ -18,6 +18,21 @@ header {
     }
 }
 
+.social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(51, 51, 182);
+    width: 100%;
+    height: 50px;
+
+    .row-icons {
+        display: flex;
+        gap: 5px;
+    }
+
+}
+
 /*  */
 /* .container-profile { */
 /*     &__fix-position {} */

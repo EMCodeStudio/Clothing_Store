@@ -58,7 +58,7 @@ function ProfileOptions() {
                     </UnstyledButton>
                 </Menu.Target>
                 <Menu.Dropdown>
-                    <Menu.Label>Web</Menu.Label>
+                    <Menu.Label>Tienda</Menu.Label>
                     <Menu.Item
                         leftSection={
                             <IconHeart

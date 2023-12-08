@@ -13,9 +13,10 @@ const HomeCarousel = () => {
 
     return (
         <>
+
             <SlCarousel
-             autoplayInterval={5000} 
-                autoplay={true}
+                autoplayInterval={5000}
+                autoplay={false}
                 loop
                 navigation
                 pagination
@@ -24,10 +25,17 @@ const HomeCarousel = () => {
                 {
                     ImageData.map((data) => (
                         <SlCarouselItem key={data.id} className='carousel-item'>
+                     
+                         
                             <img
                                 alt={data.alt}
                                 src={data.image}
                             />
+
+
+
+
+
                         </SlCarouselItem>
                     ))
                 }
