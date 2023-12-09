@@ -4,6 +4,8 @@ header {
     @media(max-width: 442px) {
         border-bottom: none !important;
     }
+
+
 }
 
 .shop-container-icons {
@@ -53,6 +55,37 @@ header {
         .youtube-icon {
             @include theme($theme: colors.$youtube);
 
+        }
+    }
+}
+
+
+
+
+
+
+
+// src/components/Search.scss
+.search-container {
+    position: relative;
+
+    .results-container {
+        z-index: 1000000;
+        position: absolute; // Cambiado a absolute
+        top: 100%; // Se ajusta según sea necesario para la posición vertical
+        left: 0;
+        width: 100%;
+        margin-top: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Sombra para resaltar el contenedor
+
+        .result-item {
+            padding: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #f0f0f0;
+            }
         }
     }
 }

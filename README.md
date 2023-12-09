@@ -121,18 +121,24 @@
 
 ### STEPS
 
-1) Header Menu
+1) Global Header Menu
 
 - Logo *
 - Menu Options *
-- Search Field
+- Search Field 
 - Profile Options *
-- Social Icons Links
+- Social Icons Links *
 - Notifications and Cart Icons Options *
 - Login Button Options *
+- Menu fixed position
 
 2) Home Images Carousel
 
-- Add Images
-- Autoplay
-- Dragging Images
+- Add Images *
+- Next & Preview options *
+- Autoplay *
+- Dragging Images *
+- Slide position state
+- Scroll down animation
+- Shadow image
+- Title + Subtitle + Button Link
