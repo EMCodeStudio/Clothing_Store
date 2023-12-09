@@ -98,13 +98,6 @@
 - npm i js-cookie --workspace client
 - npm i dayjs --workspace client
 
-## Commands
-
-- npm run dev
-- npm run dev --workspace client
-- npm run dev --workspace server
-- npm run build
-- npm start
 
 ## CLIENT DEVELOTMENT
 
@@ -129,7 +122,7 @@
 - Profile Options *
 - Social Icons Links *
 - Notifications and Cart Icons Options *
-- Login Button Options *
+- Login Buttons Options *
 - Menu fixed position
 
 2) Home Images Carousel
@@ -138,7 +131,15 @@
 - Next & Preview options *
 - Autoplay *
 - Dragging Images *
-- Slide position state
+- Slide position state animation
 - Scroll down animation
 - Shadow image
 - Title + Subtitle + Button Link
+
+## Commands
+
+- npm run dev
+- npm run dev --workspace client
+- npm run dev --workspace server
+- npm run build
+- npm start

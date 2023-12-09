@@ -3,6 +3,8 @@ import { SlCarousel, SlCarouselItem, /* SlDivider, */ /* SlSwitch  */ } from '@s
 //import { useState } from 'react'
 import './CarouselStyle.scss'
 import { ImageData } from './CarouselData'
+import ScrollDown from './CarouselParts/ScrollDown'
+import CoverCarousel from './CarouselParts/CoverCarousel'
 //import { IconHandMove, IconHandOff, IconPlayerPause, IconPlayerPlay } from '@tabler/icons-react'
 const HomeCarousel = () => {
 
@@ -14,6 +16,7 @@ const HomeCarousel = () => {
     return (
         <>
 
+            <ScrollDown />
             <SlCarousel
                 autoplayInterval={6000}
                 autoplay={true}
@@ -21,21 +24,15 @@ const HomeCarousel = () => {
                 navigation
                 pagination
                 mouseDragging={true}
-                className='carousel-image'>
+                className='carousel-container'>
+                    <CoverCarousel/>
                 {
                     ImageData.map((data) => (
                         <SlCarouselItem key={data.id} className='carousel-item'>
-                     
-                         
                             <img
                                 alt={data.alt}
                                 src={data.image}
                             />
-
-
-
-
-
                         </SlCarouselItem>
                     ))
                 }

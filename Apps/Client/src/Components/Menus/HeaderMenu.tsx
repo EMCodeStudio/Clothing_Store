@@ -63,6 +63,7 @@ export function HeaderMegaMenu() {
                     zIndex={1000000}
                 >
                     <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
+                        
                         <Divider my="sm" />
                         <MenuOptionsTwo />
                         <Divider my="sm" />
@@ -70,11 +71,10 @@ export function HeaderMegaMenu() {
                         <Group justify="center" grow pb="xl" px="md">
                             <ProfileOptions />
                         </Group>
+
                         <Group px="md">
                             <FavoriteCartOptions />
                         </Group>
-
-
 
                         {/*   <Group justify="center" grow pb="xl" px="md"> */}
                         {/*       <LoginButtons /> */}

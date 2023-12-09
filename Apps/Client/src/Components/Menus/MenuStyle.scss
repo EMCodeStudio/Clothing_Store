@@ -72,24 +72,24 @@ header {
     .search-input-container {
         display: flex;
         align-items: center;
-      }
+    }
 
-      .clear-button {
+    .clear-button {
         background: none;
         border: none;
         cursor: pointer;
         font-size: 16px;
         color: #888;
-      }
-      
+    }
+
     .results-container {
         z-index: 1000000;
-        position: absolute; // Cambiado a absolute
-        top: 100%; // Se ajusta según sea necesario para la posición vertical
+        position: absolute; 
+        top: 100%; 
         left: 0;
         width: 100%;
         margin-top: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Sombra para resaltar el contenedor
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
         background-color: colors.$white;
 
         .result-item {

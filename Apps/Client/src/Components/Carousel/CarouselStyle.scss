@@ -1,8 +1,9 @@
-.carousel-image {
+.carousel-container {
     background-color: rgb(51, 51, 182);
     color: white;
     cursor: grab;
     max-height: 483px;
+
 
     .carousel-item {
         justify-content: start !important;
@@ -12,5 +13,73 @@
             margin-top: 0;
             max-height: 50vh;
         }
+    }
+
+
+    /*  @media (max-width:512px) { */
+    /*    */
+    /*      .scroll-container { */
+    /*          display: none; */
+    /*      } */
+
+    /*  } */
+
+}
+
+
+.scroll-down-container {
+    z-index: 10000001;
+    left: 49%;
+    top: 550px;
+    position: absolute;
+
+    .scroll-icon {
+        cursor: pointer;
+        height: 34px;
+        width: 18px;
+        position: relative;
+        border-radius: 2em;
+        border: 1.5px solid #ffff;
+
+        .circle {
+            height: .4em;
+            width: .4em;
+            position: absolute;
+            left: 50%;
+            top: 15%;
+            border-radius: .4em;
+            background-color: #ffff;
+            transform: translate(-50%, 0);
+            animation: es-1-animate 5s ease-in-out infinite;
+        }
+    }
+
+}
+
+.cover-carousel {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.096), rgba(7, 4, 4, 0.295));
+    background-size: cover, contain;
+    background-position: center, right bottom;
+    background-repeat: no-repeat, no-repeat;
+    position: absolute;
+}
+
+@keyframes es-1-animate {
+    0% {
+        transform: translate(-50%, 0);
+        opacity: 0;
+    }
+
+    20%,
+    60% {
+        opacity: 0.9;
+    }
+
+    90%,
+    100% {
+        opacity: 0;
+        transform: translate(-50%, 150%);
     }
 }
