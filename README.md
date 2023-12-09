@@ -125,7 +125,7 @@
 
 - Logo *
 - Menu Options *
-- Search Field 
+- Search Field *
 - Profile Options *
 - Social Icons Links *
 - Notifications and Cart Icons Options *

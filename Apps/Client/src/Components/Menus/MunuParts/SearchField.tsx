@@ -35,7 +35,7 @@ function SearchField(props: TextInputProps) {
         );
 
         setSearchResults(results);
-        setIsSearchVisible(true); 
+        setIsSearchVisible(true);
     };
 
     const handleProductClick = (productId: number) => {
@@ -51,7 +51,11 @@ function SearchField(props: TextInputProps) {
             setIsSearchVisible(false);
         }
     };
-    
+
+    const handleClearSearch = () => {
+        setSearchTerm('');
+        setSearchResults([]);
+    };
 
     useEffect(() => {
         document.addEventListener('click', handleClickOutsideSearch);
@@ -64,31 +68,39 @@ function SearchField(props: TextInputProps) {
 
         <div className="search-container" ref={searchRef}>
 
+            <div className="search-input-container">
+                <TextInput
+                    type='search'
+                    value={searchTerm}
+                    onChange={handleSearch}
+                    radius="xl"
+                    size="md"
+                    placeholder="Realizar Busqueda..."
+                    rightSectionWidth={42}
+                    leftSection={
+                        <IconSearch style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+                    }
 
-            <TextInput
-                value={searchTerm}
-                onChange={handleSearch}
-                radius="xl"
-                size="md"
-                placeholder="Realizar Busqueda..."
-                rightSectionWidth={42}
-                leftSection={
-                    <IconSearch style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
-                }
+                    rightSection={
+                        <ActionIcon
+                            onClick={handleSearchButton}
+                            size={32}
+                            radius="xl"
+                            color={theme.primaryColor}
+                            variant="filled">
+                            <IconArrowRight style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
+                        </ActionIcon>
+                    }
 
-                rightSection={
-                    <ActionIcon
-                        onClick={handleSearchButton}
-                        size={32}
-                        radius="xl"
-                        color={theme.primaryColor}
-                        variant="filled">
-                        <IconArrowRight style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
-                    </ActionIcon>
-                }
+                    {...props}
+                />
 
-                {...props}
-            />
+                {searchTerm && (
+                    <button className="clear-button" onClick={handleClearSearch}>
+                        &#x2715; {/* Código HTML para el símbolo de 'X' */}
+                    </button>
+                )}
+            </div>
             {isSearchVisible && (
                 <>
                     {
