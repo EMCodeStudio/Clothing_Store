@@ -8,6 +8,7 @@ import {
 import { IconArrowRight, IconSearch } from '@tabler/icons-react';
 import { useEffect, useRef, useState } from 'react';
 import { dataProduct } from '../MenuData/ProductData';
+import { useClickOutside } from '@mantine/hooks';
 interface Product {
     id: number;
     title: string;
@@ -19,8 +20,12 @@ function SearchField(props: TextInputProps) {
     const theme = useMantineTheme()
     const [searchTerm, setSearchTerm] = useState('');
     const [searchResults, setSearchResults] = useState<Product[]>([]);
-    const [isSearchVisible, setIsSearchVisible] = useState(true);
-    const searchRef = useRef<HTMLInputElement | null>(null);
+    const [searchDataOpened, setSerchDataOpened] = useState(false);
+    const ref = useClickOutside(() => setSerchDataOpened(false));
+
+    //const [isSearchVisible, setIsSearchVisible] = useState(true);
+
+    // const searchRef = useRef<HTMLInputElement | null>(null);
 
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
         const inputTerm = e.target.value
@@ -35,39 +40,46 @@ function SearchField(props: TextInputProps) {
         );
 
         setSearchResults(results);
-        setIsSearchVisible(true);
+        // setIsSearchVisible(true);
+        setSerchDataOpened(true)
     };
 
     const handleProductClick = (productId: number) => {
         console.log('Producto seleccionado:', productId);
     };
-
     const handleSearchButton = () => {
         console.log('Letras ingresadas:', searchTerm);
     };
 
-    const handleClickOutsideSearch = (e: MouseEvent) => {
-        if (searchRef.current && !searchRef.current.contains(e.target as Node)) {
-            setIsSearchVisible(false);
-        }
-    };
+
 
     const handleClearSearch = () => {
         setSearchTerm('');
         setSearchResults([]);
     };
 
-    useEffect(() => {
-        document.addEventListener('click', handleClickOutsideSearch);
-        return () => {
-            document.removeEventListener('click', handleClickOutsideSearch);
-        };
-    }, []);
+    /*  const handleClickOutsideSearch = (e: MouseEvent) => { */
+    /*      if (searchRef.current && !searchRef.current.contains(e.target as Node)) { */
+    /*          setIsSearchVisible(false); */
+    /*      } */
+    /*  }; */
+
+    /*  useEffect(() => { */
+    /*      document.addEventListener('click', handleClickOutsideSearch); */
+    /*      return () => { */
+    /*          document.removeEventListener('click', handleClickOutsideSearch); */
+    /*      }; */
+    /*  }, []); */
+
+   
+   
 
     return (
 
-        <div className="search-container" ref={searchRef}>
-
+        <div className="search-container"
+            ref={ref}
+        //ref={searchRef}
+        >
             <div className="search-input-container">
                 <TextInput
                     type='search'
@@ -101,12 +113,13 @@ function SearchField(props: TextInputProps) {
                     </button>
                 )}
             </div>
-            {isSearchVisible && (
+
+            {searchDataOpened && (
                 <>
                     {
                         searchResults.length > 0 &&
                         (
-                            <div className="results-container">
+                            <div className="results-container" >
                                 {searchResults.map(product => (
                                     <div
                                         key={product.id}

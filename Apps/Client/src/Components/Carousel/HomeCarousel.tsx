@@ -1,11 +1,11 @@
 
 import { SlCarousel, SlCarouselItem, /* SlDivider, */ /* SlSwitch  */ } from '@shoelace-style/shoelace/dist/react'
 //import { useState } from 'react'
-import './CarouselStyle.scss'
 import { ImageData } from './CarouselData'
 import ScrollDown from './CarouselParts/ScrollDown'
 import CoverCarousel from './CarouselParts/CoverCarousel'
 //import { IconHandMove, IconHandOff, IconPlayerPause, IconPlayerPlay } from '@tabler/icons-react'
+import './CarouselStyle.scss'
 const HomeCarousel = () => {
 
     /*  */
@@ -19,7 +19,7 @@ const HomeCarousel = () => {
             <ScrollDown />
             <SlCarousel
                 autoplayInterval={6000}
-                autoplay={true}
+                autoplay={false}
                 loop
                 navigation
                 pagination
