@@ -7,6 +7,7 @@ import {
     Menu,
     rem,
     useMantineTheme,
+    ActionIcon,
 } from '@mantine/core';
 import cx from 'clsx';
 import {
@@ -17,12 +18,15 @@ import {
     IconSettings,
     IconUser,
     IconTruck,
+    IconSun,
+    IconMoonStars,
 } from '@tabler/icons-react';
 import classes from '../HeaderMegaMenu.module.css';
 
 import { user } from '../MenuData/UserData';
 import { useState } from 'react';
 import '../MenuStyle.scss'
+
 
 //const baseClassProfile = 'container-profile'
 
@@ -31,6 +35,9 @@ function ProfileOptions() {
     const theme = useMantineTheme();
 
     const [userMenuOpened, setUserMenuOpened] = useState(false);
+
+    
+
 
     return (
         <>
@@ -100,6 +107,7 @@ function ProfileOptions() {
                     >
                         Editar Perfil
                     </Menu.Item>
+
                     <Menu.Item
                         leftSection={
                             <IconSettings style={{ width: rem(16), height: rem(16) }} stroke={1.5} />

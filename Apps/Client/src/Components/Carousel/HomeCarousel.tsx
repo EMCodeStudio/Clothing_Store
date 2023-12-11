@@ -6,6 +6,7 @@ import ScrollDown from './CarouselParts/ScrollDown'
 import CoverCarousel from './CarouselParts/CoverCarousel'
 //import { IconHandMove, IconHandOff, IconPlayerPause, IconPlayerPlay } from '@tabler/icons-react'
 import './CarouselStyle.scss'
+import { useEffect, useState } from 'react'
 const HomeCarousel = () => {
 
     /*  */
@@ -13,30 +14,52 @@ const HomeCarousel = () => {
     /*  */
     /*     const [isDragginEnabled, setIsDraggingEnabled] = useState(true) */
 
+    const [totalSlides, setTotalSlides] = useState<number>(0)
+    const [currentSlide, setCurrentSlide] = useState<number>(0)
+
+    const carouselSettings = {
+        autoplayInterval: 6000,
+        autoplay: true,
+        loop: true,
+        navigation: true,
+        pagination: true,
+        mouseDragging: true,
+    
+    };
+
+    useEffect(() => {
+        // Mueve setTotalSlides aquí para que se llame solo cuando el componente se monte.
+        setTotalSlides(ImageData.length);
+      }, [ImageData]);
+
     return (
         <>
-
             <ScrollDown />
             <SlCarousel
-                autoplayInterval={6000}
-                autoplay={false}
-                loop
-                navigation
-                pagination
-                mouseDragging={true}
+                {...carouselSettings}
                 className='carousel-container'>
-                    <CoverCarousel/>
+                <CoverCarousel />
                 {
-                    ImageData.map((data) => (
-                        <SlCarouselItem key={data.id} className='carousel-item'>
-                            <img
-                                alt={data.alt}
-                                src={data.image}
-                            />
-                        </SlCarouselItem>
-                    ))
+                    ImageData.map((data) => {
+                        return (
+                            < SlCarouselItem key={data.id} className='carousel-item' >
+                                <img
+                                    alt={data.alt}
+                                    src={data.image}
+                                />
+                            </SlCarouselItem>)
+                    })
                 }
-            </SlCarousel>
+            </SlCarousel >
+            <div className="carousel-indicators">
+                {[...Array(totalSlides)].map((_, index) => (
+                    <div
+                        key={index}
+                        className={`indicator ${index === currentSlide ? 'active' : ''}`}
+                        onClick={() => setCurrentSlide(index)}
+                    />
+                ))}
+            </div>
 
             {/*  <SlDivider></SlDivider> */}
             {/*

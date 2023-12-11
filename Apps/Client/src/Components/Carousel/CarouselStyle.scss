@@ -4,7 +4,6 @@
     cursor: grab;
     max-height: 483px;
 
-
     .carousel-item {
         justify-content: start !important;
         align-items: start !important;
@@ -13,22 +12,35 @@
             margin-top: 0;
             max-height: 50vh;
         }
-
-        
     }
 
-
-
-
-    .carousel__navigation-button {
-        background-color: aqua !important;
-    }
-
+    
 }
 
 
+.carousel-indicators {
+    z-index: 10000001;
+    position: absolute;
+     left: 49%;
+     top: 650px;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    .indicator {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #ccc;
+      margin: 0 5px;
+      cursor: pointer;
 
+      &.active {
+        background-color: #333;
+      }
+    }
+  }
 
 .scroll-down-container {
     z-index: 10000001;

@@ -1,8 +1,10 @@
 
-import { MantineProvider } from '@mantine/core';
+
 import '@mantine/core/styles.css';
 import { HeaderMegaMenu } from './Components/Menus/HeaderMenu';
-import HomeCarousel from './Components/Carousel/HomeCarousel';
+/* import HomeCarousel from './Components/Carousel/HomeCarousel'; */
+/* import HomeCarouselTwo from './Components/Carousel/HomeCarouselTwo'; */
+import { MantineProvider } from '@mantine/core';
 
 
 function App() {
@@ -11,7 +13,6 @@ function App() {
     <>
       <MantineProvider>
         <HeaderMegaMenu />
-        <HomeCarousel />
       </MantineProvider>
     </>
 

@@ -6,7 +6,7 @@ import {
     useMantineTheme,
 } from '@mantine/core';
 import { IconArrowRight, IconSearch } from '@tabler/icons-react';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { dataProduct } from '../MenuData/ProductData';
 import { useClickOutside } from '@mantine/hooks';
 interface Product {
@@ -24,7 +24,6 @@ function SearchField(props: TextInputProps) {
     const ref = useClickOutside(() => setSerchDataOpened(false));
 
     //const [isSearchVisible, setIsSearchVisible] = useState(true);
-
     // const searchRef = useRef<HTMLInputElement | null>(null);
 
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -38,25 +37,23 @@ function SearchField(props: TextInputProps) {
         const results = dataProduct.filter(product =>
             product.title.toLowerCase().includes(inputTerm.toLowerCase())
         );
-
         setSearchResults(results);
-        // setIsSearchVisible(true);
         setSerchDataOpened(true)
     };
-
-    const handleProductClick = (productId: number) => {
-        console.log('Producto seleccionado:', productId);
-    };
-    const handleSearchButton = () => {
-        console.log('Letras ingresadas:', searchTerm);
-    };
-
-
 
     const handleClearSearch = () => {
         setSearchTerm('');
         setSearchResults([]);
     };
+
+
+    const handleProductClick = (productId: number) => { 
+        console.log('Producto seleccionado:', productId); 
+    }; 
+    const handleSearchButton = () => {
+        console.log('Letras ingresadas:', searchTerm);
+    };
+
 
     /*  const handleClickOutsideSearch = (e: MouseEvent) => { */
     /*      if (searchRef.current && !searchRef.current.contains(e.target as Node)) { */
@@ -71,8 +68,6 @@ function SearchField(props: TextInputProps) {
     /*      }; */
     /*  }, []); */
 
-   
-   
 
     return (
 
@@ -108,7 +103,7 @@ function SearchField(props: TextInputProps) {
                 />
 
                 {searchTerm && (
-                    <button className="clear-button" onClick={handleClearSearch}>
+                    <button type='button' className="clear-button" onClick={handleClearSearch}>
                         &#x2715; {/* Código HTML para el símbolo de 'X' */}
                     </button>
                 )}

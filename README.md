@@ -72,6 +72,7 @@
 - npm i express --workspace server   <!--  npm install express --no-save -->
 - npm i serve-static --workspace server
 - npm i morgan -D --workspace server
+
 - npm i mongoose --workspace server
 - npm i drizzle --workspace server
 - npm i bcryptjs --workspace server
@@ -98,19 +99,19 @@
 - npm i js-cookie --workspace client
 - npm i dayjs --workspace client
 
-
 ## CLIENT DEVELOTMENT
 
 ### LIBS
 
 - npm i sass@latest --workspace client
-- npm i styled-components --workspace client
+- npm i styled-components@latest --workspace client
 - npm i @mantine/core @mantine/hooks --workspace client
-- npm i @mantine/core/styles.css --workspace client
 - npm i @tabler/icons-react --workspace client
-- npm install --save-dev postcss postcss-preset-mantine postcss-simple-vars --workspace client
+- npm i --save-dev postcss postcss-preset-mantine postcss-simple-vars --workspace client
 - npm i @mantinex/mantine-logo --workspace client
+
 - npm i @shoelace-style/shoelace --workspace client
+- npm i embla-carousel-react --save --workspace client
 
 ### STEPS
 
