@@ -1,46 +1,92 @@
-.carousel-container {
-    background-color: rgb(51, 51, 182);
-    color: white;
-    cursor: grab;
-    max-height: 483px;
+.swiper {
+    width: 100%;
+    height: 100%;
+    width: 100%;
+    height: 50svh;
+    margin-left: auto;
+    margin-right: auto;
 
-    .carousel-item {
-        justify-content: start !important;
-        align-items: start !important;
+    .swiper-slide {
+        background-size: cover;
+        background-position: center;
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         img {
-            margin-top: 0;
-            max-height: 50vh;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
+        
     }
 
-    
+    .mySwiper2 {
+        height: 80%;
+        width: 100%;
+    }
+
+    .mySwiper {
+        height: 20%;
+        box-sizing: border-box;
+        padding: 10px 0;
+
+        .swiper-slide {
+            width: 25%;
+            height: 100%;
+            opacity: 0.4;
+        }
+
+        .swiper-slide-thumb-active {
+            opacity: 1;
+        }
+    }
 }
 
 
-.carousel-indicators {
-    z-index: 10000001;
+
+.cover-carousel {
+    z-index: 1001 !important;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.055), rgba(7, 4, 4, 0.192));
+    background-size: cover, contain;
+    background-position: center, right bottom;
+    background-repeat: no-repeat, no-repeat;
     position: absolute;
-     left: 49%;
-     top: 650px;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
 
-    .indicator {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: #ccc;
-      margin: 0 5px;
-      cursor: pointer;
 
-      &.active {
-        background-color: #333;
-      }
-    }
-  }
+/* .carousel-indicators { */
+/*     z-index: 10000001; */
+/*     position: absolute; */
+/*     left: 49%; */
+/*     top: 750px; */
+/*     transform: translateX(-50%); */
+/*     display: flex; */
+/*     justify-content: center; */
+/*     align-items: center; */
+/*  */
+/*     .indicator { */
+/*         width: 10px; */
+/*         height: 10px; */
+/*         border-radius: 50%; */
+/*         background-color: #ccc; */
+/*         margin: 0 5px; */
+/*         cursor: pointer; */
+/*  */
+/*         &.active { */
+/*             background-color: #333; */
+/*         } */
+/*     } */
+/* } */
+/*  */
+
 
 .scroll-down-container {
     z-index: 10000001;
@@ -54,7 +100,7 @@
         width: 18px;
         position: relative;
         border-radius: 2em;
-        border: 1.5px solid #ffff;
+        border: 1.5px solid #d1d1d1;
 
         .circle {
             height: .4em;
@@ -71,28 +117,16 @@
 
 }
 
-.cover-carousel {
-    height: 100%;
-    max-width: 98%;
-    background: linear-gradient(rgba(0, 0, 0, 0.096), rgba(7, 4, 4, 0.24));
-    background-size: cover, contain;
-    background-position: center, right bottom;
-    background-repeat: no-repeat, no-repeat;
-    position: absolute;
-}
 
 @keyframes scroll-animate {
-
     0% {
         transform: translate(-50%, 0);
         opacity: 0;
     }
-
     20%,
     60% {
         opacity: 0.9;
     }
-
     90%,
     100% {
         opacity: 0;

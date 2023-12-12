@@ -7,11 +7,11 @@ interface ImageData {
 const image1 = 'https://images.unsplash.com/photo-1470309864661-68328b2cd0a5?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA % 3D% 3D'
 const image2 = 'https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid = M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA % 3D % 3D'
 const image3 = 'https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid = M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA % 3D % 3D'
-const image4 = 'https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid = M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA % 3D % 3D'
+const image4 = 'https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid = M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA % 3D % 3D'
 const image5 = 'https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1548&auto=format&fit=crop&ixlib=rb-4.0.3&ixid = M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA % 3D % 3D'
-const image6 = 'https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid = M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA % 3D % 3D'
 
-const images: string[] = [image1, image2, image3, image4, image5, image6]
+
+const images: string[] = [image1, image2, image3, image4, image5]
 
 const imageByIndex = (index: number): string => images[index % images.length]
 

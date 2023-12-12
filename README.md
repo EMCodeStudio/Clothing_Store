@@ -109,9 +109,8 @@
 - npm i @tabler/icons-react --workspace client
 - npm i --save-dev postcss postcss-preset-mantine postcss-simple-vars --workspace client
 - npm i @mantinex/mantine-logo --workspace client
-
+- npm i swiper --workspace client
 - npm i @shoelace-style/shoelace --workspace client
-- npm i embla-carousel-react --save --workspace client
 
 ### STEPS
 
@@ -132,8 +131,8 @@
 - Next & Preview options *
 - Autoplay *
 - Dragging Images *
-- Slide position state animation
-- Scroll down animation
+- Slide position state animation *
+- Scroll down animation *
 - Shadow image
 - Title + Subtitle + Button Link
 
