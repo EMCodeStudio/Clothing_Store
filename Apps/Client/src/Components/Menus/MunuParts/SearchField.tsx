@@ -1,12 +1,6 @@
-import {
-    ActionIcon,
-    TextInput,
-    TextInputProps,
-    rem,
-    useMantineTheme,
-} from '@mantine/core';
-import { IconArrowRight, IconEyeSearch, IconSearch } from '@tabler/icons-react';
 import { useState } from 'react';
+import { ActionIcon, TextInput, TextInputProps, rem, useMantineTheme } from '@mantine/core';
+import { IconArrowRight, IconCircleX, IconEyeSearch, IconSearch } from '@tabler/icons-react';
 import { dataProduct } from '../MenuData/ProductData';
 import { useClickOutside } from '@mantine/hooks';
 import { ClearButtonSearch } from '../../Styled/Buttons/ClearButton';
@@ -48,14 +42,12 @@ function SearchField(props: TextInputProps) {
         setSearchResults([]);
     };
 
-
     const handleProductClick = (productId: number) => {
         console.log('Producto seleccionado:', productId);
     };
     const handleSearchButton = () => {
         console.log('Letras ingresadas:', searchTerm);
     };
-
 
     /*  const handleClickOutsideSearch = (e: MouseEvent) => { */
     /*      if (searchRef.current && !searchRef.current.contains(e.target as Node)) { */
@@ -69,7 +61,6 @@ function SearchField(props: TextInputProps) {
     /*          document.removeEventListener('click', handleClickOutsideSearch); */
     /*      }; */
     /*  }, []); */
-
 
     return (
 
@@ -107,7 +98,7 @@ function SearchField(props: TextInputProps) {
                          &#x2715; 
                      </button> */
 
-                    <ClearButtonSearch onClick={handleClearSearch} />
+                    <ClearButtonSearch onClick={handleClearSearch} ><IconCircleX /></ClearButtonSearch>
 
                 )}
             </div>
@@ -120,7 +111,7 @@ function SearchField(props: TextInputProps) {
                                 {searchResults.map(product => (
                                     <ResultItemSearch key={product.id} onClick={() => handleProductClick(product.id)}
                                     >
-                                        <span className="icon"><IconEyeSearch size={16}  /* color={theme.colors.blue[6]} *//></span>
+                                        <span className="icon"><IconEyeSearch size={16}  /* color={theme.colors.blue[6]} */ /></span>
                                         <div className="item-content">
                                             <p>  {product.title}</p>
                                         </div>
@@ -129,12 +120,10 @@ function SearchField(props: TextInputProps) {
                                 ))}
                             </ListResultSearch>
                         )
-
                     }
                 </>
             )}
         </div>
-
     )
 }
 
