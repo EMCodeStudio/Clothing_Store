@@ -4,8 +4,6 @@ header {
     @media(max-width: 442px) {
         border-bottom: none !important;
     }
-
-
 }
 
 .shop-container-icons {
@@ -19,10 +17,17 @@ header {
     }
 }
 
-.social-container {
+%flex-centered {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+.social-container {
+
+    @extend %flex-centered;
+
     background-color: colors.$bg-primary;
     width: 100%;
     height: 50px;
@@ -59,48 +64,43 @@ header {
     }
 }
 
-
-
-
-
-
-
-// src/components/Search.scss
 .search-container {
     position: relative;
 
-    .search-input-container {
-        display: flex;
-        align-items: center;
+    .search-input {
+        @extend %flex-centered;
     }
 
-    .clear-button {
-        background: none;
-        border: none;
-        cursor: pointer;
-        font-size: 16px;
-        color: #888;
-    }
+    //Pasar a Styled
+    /* .clear-button { */
+    /*     background: none; */
+    /*     border: none; */
+    /*     cursor: pointer; */
+    /*     font-size: 16px; */
+    /*     color: #888; */
+    /* } */
 
-    .results-container {
-        z-index: 1000000;
-        position: absolute; 
-        top: 100%; 
-        left: 0;
-        width: 100%;
-        margin-top: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-        background-color: colors.$white;
+    .search-results-list {
+      /*   z-index: 1000001; */
+      /*   position: absolute; */
+      /*   width: 100%; */
+      /*   top: 100%; */
+      /*   left: 0; */
 
+      /*   margin-top: 10px; */
+      /*   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+      /*   background-color: colors.$white; */
+
+        //Pasar a Styled
         .result-item {
-            padding: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+          /*   padding: 8px; */
+          /*   cursor: pointer; */
+          /*   transition: background-color 0.3s; */
 
-            &:hover {
-                background-color: colors.$bg-primary;
-                color: colors.$white;
-            }
+          /*   &:hover { */
+          /*       background-color: colors.$bg-primary; */
+          /*       color: colors.$white; */
+          /*   } */
         }
     }
 }

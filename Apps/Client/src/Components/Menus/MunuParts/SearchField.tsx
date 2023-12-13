@@ -5,10 +5,12 @@ import {
     rem,
     useMantineTheme,
 } from '@mantine/core';
-import { IconArrowRight, IconSearch } from '@tabler/icons-react';
+import { IconArrowRight, IconEyeSearch, IconSearch } from '@tabler/icons-react';
 import { useState } from 'react';
 import { dataProduct } from '../MenuData/ProductData';
 import { useClickOutside } from '@mantine/hooks';
+import { ClearButtonSearch } from '../../Styled/Buttons/ClearButton';
+import { ListResultSearch, ResultItemSearch } from '../../Styled/List/SearchListResult';
 interface Product {
     id: number;
     title: string;
@@ -47,9 +49,9 @@ function SearchField(props: TextInputProps) {
     };
 
 
-    const handleProductClick = (productId: number) => { 
-        console.log('Producto seleccionado:', productId); 
-    }; 
+    const handleProductClick = (productId: number) => {
+        console.log('Producto seleccionado:', productId);
+    };
     const handleSearchButton = () => {
         console.log('Letras ingresadas:', searchTerm);
     };
@@ -75,7 +77,7 @@ function SearchField(props: TextInputProps) {
             ref={ref}
         //ref={searchRef}
         >
-            <div className="search-input-container">
+            <div className="search-input">
                 <TextInput
                     type='search'
                     value={searchTerm}
@@ -87,7 +89,6 @@ function SearchField(props: TextInputProps) {
                     leftSection={
                         <IconSearch style={{ width: rem(18), height: rem(18) }} stroke={1.5} />
                     }
-
                     rightSection={
                         <ActionIcon
                             onClick={handleSearchButton}
@@ -101,31 +102,32 @@ function SearchField(props: TextInputProps) {
 
                     {...props}
                 />
-
                 {searchTerm && (
-                    <button type='button' className="clear-button" onClick={handleClearSearch}>
-                        &#x2715; {/* Código HTML para el símbolo de 'X' */}
-                    </button>
+                    /*  <button type='button' className="clear-button" onClick={handleClearSearch}> 
+                         &#x2715; 
+                     </button> */
+
+                    <ClearButtonSearch onClick={handleClearSearch} />
+
                 )}
             </div>
-
             {searchDataOpened && (
                 <>
                     {
                         searchResults.length > 0 &&
                         (
-                            <div className="results-container" >
+                            <ListResultSearch>
                                 {searchResults.map(product => (
-                                    <div
-                                        key={product.id}
-                                        className="result-item"
-                                        onClick={() => handleProductClick(product.id)}
+                                    <ResultItemSearch key={product.id} onClick={() => handleProductClick(product.id)}
                                     >
-                                        {product.title}
-                                    </div>
-                                ))}
-                            </div>
+                                        <span className="icon"><IconEyeSearch size={16}  /* color={theme.colors.blue[6]} *//></span>
+                                        <div className="item-content">
+                                            <p>  {product.title}</p>
+                                        </div>
 
+                                    </ResultItemSearch>
+                                ))}
+                            </ListResultSearch>
                         )
 
                     }

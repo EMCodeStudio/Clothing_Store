@@ -1,25 +1,14 @@
-import {
-    Group,
-    Divider,
-    Box,
-    Burger,
-    Drawer,
-    ScrollArea,
-    rem,
-} from '@mantine/core';
-
+import { Group, Divider, Box, Burger, Drawer, ScrollArea, rem, } from '@mantine/core';
 import { MantineLogo } from '@mantinex/mantine-logo';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './HeaderMegaMenu.module.css';
 import SearchField from './MunuParts/SearchField';
-import LoginButtons from './MunuParts/LoginButtons';
+//import LoginButtons from './MunuParts/LoginButtons';
 import ProfileOptions from './MunuParts/ProfileOptions';
 import FavoriteCartOptions from './MunuParts/FavoriteCartOptions';
 import MenuOptionsOne from './MunuParts/MenuOptionsOne';
 import MenuOptionsTwo from './MunuParts/MenuOptionsTwo';
 import SocialOptions from './MunuParts/SocialOptions';
-
-
 
 export function HeaderMegaMenu() {
 
@@ -27,9 +16,7 @@ export function HeaderMegaMenu() {
 
     return (
         <>
-           
-           <SocialOptions/>
-           
+            <SocialOptions />
             <Box mt={10} pb={80}>
                 <header className={classes.header}>
                     <Group justify="space-between" h="100%">
@@ -43,16 +30,15 @@ export function HeaderMegaMenu() {
                         <Group visibleFrom='sm' >
                             <ProfileOptions />
                         </Group>
-                        {/*   <Group visibleFrom="sm"> */}
-                        {/*       <LoginButtons /> */}
-                        {/*   </Group> */}
+                        {/*   <Group visibleFrom="sm"> 
+                           <LoginButtons /> 
+                           </Group> */}
                         <Group visibleFrom='sm' >
                             <FavoriteCartOptions />
                         </Group>
                         <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
                     </Group>
                 </header>
-
                 <Drawer
                     opened={drawerOpened}
                     onClose={closeDrawer}
@@ -63,19 +49,15 @@ export function HeaderMegaMenu() {
                     zIndex={1000000}
                 >
                     <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
-                        
                         <Divider my="sm" />
                         <MenuOptionsTwo />
                         <Divider my="sm" />
-
                         <Group justify="center" grow pb="xl" px="md">
                             <ProfileOptions />
                         </Group>
-
                         <Group px="md">
                             <FavoriteCartOptions />
                         </Group>
-
                         {/*   <Group justify="center" grow pb="xl" px="md"> */}
                         {/*       <LoginButtons /> */}
                         {/*   </Group> */}
