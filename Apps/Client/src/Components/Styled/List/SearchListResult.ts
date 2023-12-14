@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-
-
 const ListResult = styled.ul`
   z-index: 1000001;
   position: absolute;
@@ -11,42 +9,34 @@ const ListResult = styled.ul`
   top: 100%;
   left: 0;
   margin-top: 10px;
-`
-
+`;
 const ResultItem = styled.li`
- padding: 8px;
- // margin-bottom: 20px;
-  display: flex; /* Utilizar flexbox para alinear elementos horizontalmente */
-  align-items: center; /* Alinear verticalmente al centro */
+  padding: 8px;
+  display: flex; 
+  align-items: center;
   cursor: pointer;
   transition: background-color 0.3s;
+`;
 
-  
-`
 const ListResultSearch = styled(ListResult)`
  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
  background-color: white;
-`
+`;
 
 const ResultItemSearch = styled(ResultItem)`
-
-
-
 .icon {
   display: inline-block;
-  width: 20px; /* ajusta el ancho según sea necesario */
+  width: 20px; 
   text-align: center;
-  margin-right: 10px; /* espacio entre el icono y el contenido */
-  font-size: 1.2em; /* ajusta el tamaño de la fuente según sea necesario */
+  margin-right: 10px;
+  font-size: 1.2em; 
 }
 .item-content {
   display: inline-block;
   p {
-  margin: 0 0 5px; /* ajusta el margen según sea necesario */
+  margin: 0 0 5px;
+  }
 }
-
-}
-
 &:hover {
     background-color: blue;
     color: white;

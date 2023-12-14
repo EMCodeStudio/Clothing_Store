@@ -16,14 +16,16 @@ background-color: ${Colors.bg_aliceblue};
 &:hover{
     background-color: ${Colors.white};
 }
-`
+`;
 
-const FavoriteButton = styled(ButtonIcon)`
 
-`
+const NotifyButton = styled(ButtonIcon)`
+`;
+
+const ShippingButton = styled(ButtonIcon)`
+`;
 
 const CartButton = styled(ButtonIcon)`
+`;
 
-`
-
-export {FavoriteButton, CartButton}
+export { ShippingButton, CartButton, NotifyButton }

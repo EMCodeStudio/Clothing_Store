@@ -5,10 +5,10 @@ import classes from './HeaderMegaMenu.module.css';
 import SearchField from './MunuParts/SearchField';
 //import LoginButtons from './MunuParts/LoginButtons';
 import ProfileOptions from './MunuParts/ProfileOptions';
-import FavoriteCartOptions from './MunuParts/FavoriteCartOptions';
 import MenuOptionsOne from './MunuParts/MenuOptionsOne';
 import MenuOptionsTwo from './MunuParts/MenuOptionsTwo';
 import SocialOptions from './MunuParts/SocialOptions';
+import NotifyShippingCartOptions from './MunuParts/NotifyShippingCartOptions';
 
 export function HeaderMegaMenu() {
 
@@ -33,8 +33,8 @@ export function HeaderMegaMenu() {
                         {/*   <Group visibleFrom="sm"> 
                            <LoginButtons /> 
                            </Group> */}
-                        <Group visibleFrom='sm' >
-                            <FavoriteCartOptions />
+                        <Group visibleFrom='xs' >
+                            <NotifyShippingCartOptions/>
                         </Group>
                         <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
                     </Group>
@@ -55,8 +55,8 @@ export function HeaderMegaMenu() {
                         <Group justify="center" grow pb="xl" px="md">
                             <ProfileOptions />
                         </Group>
-                        <Group px="md">
-                            <FavoriteCartOptions />
+                        <Group px="md" hiddenFrom='xs'>
+                            <NotifyShippingCartOptions />
                         </Group>
                         {/*   <Group justify="center" grow pb="xl" px="md"> */}
                         {/*       <LoginButtons /> */}

@@ -119,9 +119,9 @@
 - Logo *
 - Menu Options *
 - Search Field *
-- Profile Options *
+- Profile Options + Favorite *
 - Social Icons Links *
-- Notifications and Cart Icons Options *
+- Notifications and Cart, Shipping Icons Options *
 - Login Buttons Options *
 - Menu fixed position
 
@@ -133,7 +133,7 @@
 - Dragging Images *
 - Slide position state animation *
 - Scroll down animation *
-- Shadow image
+- Shadow image *
 - Title + Subtitle + Button Link
 
 ## Commands

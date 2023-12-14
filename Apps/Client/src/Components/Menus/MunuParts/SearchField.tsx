@@ -97,9 +97,7 @@ function SearchField(props: TextInputProps) {
                     /*  <button type='button' className="clear-button" onClick={handleClearSearch}> 
                          &#x2715; 
                      </button> */
-
                     <ClearButtonSearch onClick={handleClearSearch} ><IconCircleX /></ClearButtonSearch>
-
                 )}
             </div>
             {searchDataOpened && (
@@ -109,13 +107,11 @@ function SearchField(props: TextInputProps) {
                         (
                             <ListResultSearch>
                                 {searchResults.map(product => (
-                                    <ResultItemSearch key={product.id} onClick={() => handleProductClick(product.id)}
-                                    >
+                                    <ResultItemSearch key={product.id} onClick={() => handleProductClick(product.id)}>
                                         <span className="icon"><IconEyeSearch size={16}  /* color={theme.colors.blue[6]} */ /></span>
                                         <div className="item-content">
-                                            <p>  {product.title}</p>
+                                            <p> {product.title}</p>
                                         </div>
-
                                     </ResultItemSearch>
                                 ))}
                             </ListResultSearch>
