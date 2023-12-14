@@ -97,7 +97,7 @@ function SearchField(props: TextInputProps) {
                     /*  <button type='button' className="clear-button" onClick={handleClearSearch}> 
                          &#x2715; 
                      </button> */
-                    <ClearButtonSearch onClick={handleClearSearch} ><IconCircleX /></ClearButtonSearch>
+                    <ClearButtonSearch onClick={handleClearSearch} ><IconCircleX size={30} stroke={1.2} /></ClearButtonSearch>
                 )}
             </div>
             {searchDataOpened && (

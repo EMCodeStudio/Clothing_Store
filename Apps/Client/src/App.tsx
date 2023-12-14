@@ -7,6 +7,7 @@ import '@mantine/core/styles.css';
 import { MantineProvider } from '@mantine/core';
 import SwiperCarousel from './Components/Carousel/SwiperCarousel';
 import { HeaderMegaMenu } from './Components/Menus/HeaderMenu';
+import { FeatureServices } from './Components/Features/FeatureServices/FeatureServices';
 
 
 function App() {
@@ -14,8 +15,9 @@ function App() {
   return (
     <>
       <MantineProvider>
-        <HeaderMegaMenu/>
-        <SwiperCarousel/>
+        <HeaderMegaMenu />
+        <SwiperCarousel />
+        <FeatureServices />
       </MantineProvider>
     </>
 

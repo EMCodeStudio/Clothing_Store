@@ -136,6 +136,10 @@
 - Shadow image *
 - Title + Subtitle + Button Link
 
+## FEATURES HOME
+
+- Services
+
 ## Commands
 
 - npm run dev

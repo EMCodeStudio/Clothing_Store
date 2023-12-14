@@ -9,7 +9,6 @@ import { ImageData } from './CarouselData';
 import CoverCarousel from './CarouselParts/CoverCarousel';
 import './CarouselStyle.scss';
 import ImageList from './CarouselParts/ImageList';
-import { CSSProperties } from 'react';
 
 const SwiperCarousel: React.FC = () => {
     const swiperSettings = {
@@ -20,30 +19,19 @@ const SwiperCarousel: React.FC = () => {
     };
 
     const swiperStyles = {
-        /* '--swiper-navigation-color': '#fff', */
-        '--swiper-pagination-color': '#fff',
-        '--swiper-pagination-bullet-inactive-color': '#ffffff',
+        /*'--swiper-navigation-color': '#ffff',*/
+        '--swiper-pagination-color': '#ffff',
+        '--swiper-pagination-bullet-inactive-color': '#ffff',
     };
     return (
         <>
             <Swiper
-                //  effect='fade'
-                {...swiperSettings}
-                autoplay={{
-                    delay: 5000,
-                    disableOnInteraction: false,
-                }}
-                pagination={{
-                    clickable: true,
-                    //  dynamicBullets: true,
-                }}
-                keyboard={{
-                    enabled: true,
-                }}
+                {...swiperSettings} //  effect='fade'
+                autoplay={{delay: 5000,disableOnInteraction: false,}}
+                pagination={{clickable: true, /*dynamicBullets: true,*/ }}
+                keyboard={{enabled: true,}}
                 modules={[EffectFade, Autoplay, Pagination, Navigation, Keyboard,]}
-                style={
-                    { ...swiperStyles } as React.CSSProperties
-                }>
+                style={{ ...swiperStyles } as React.CSSProperties}>
                 {
                     ImageData.map((data) => (
                         < SwiperSlide key={data.id} className='swiper-item' >
