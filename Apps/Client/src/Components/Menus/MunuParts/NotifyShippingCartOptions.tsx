@@ -1,5 +1,5 @@
 import { rem, useMantineTheme } from "@mantine/core"
-import { IconBell, IconShoppingCart, IconTruckDelivery } from "@tabler/icons-react"
+import { IconBell, IconShoppingBag, IconTruck } from "@tabler/icons-react"
 import { CartButton, NotifyButton, ShippingButton } from "../../Styled/Buttons/NotifyShippingCartButtons"
 import '../MenuStyle.scss'
 
@@ -21,7 +21,7 @@ const NotifyShippingCartOptions = () => {
         </NotifyButton>
 
         <ShippingButton>
-          <IconTruckDelivery
+          <IconTruck
             style={{ width: rem(18), height: rem(21) }}
             color={theme.colors.green[6]}
             stroke={2}
@@ -29,7 +29,7 @@ const NotifyShippingCartOptions = () => {
         </ShippingButton>
 
         <CartButton>
-          <IconShoppingCart
+          <IconShoppingBag
             style={{ width: rem(18), height: rem(21) }}
             color={theme.colors.blue[6]}
             stroke={2}
