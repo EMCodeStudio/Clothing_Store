@@ -1,28 +1,18 @@
-import { Anchor, Box, Button, Center, Divider, Group, HoverCard, SimpleGrid, Text, ThemeIcon, UnstyledButton, rem, useMantineTheme } from "@mantine/core"
+import { Anchor, Box, Button, Center, Divider, Group, HoverCard, SimpleGrid, Text, rem, useMantineTheme } from "@mantine/core"
 import classes from '../HeaderMegaMenu.module.css';
 import { IconChevronDown } from "@tabler/icons-react";
 import { categotyData } from "../MenuData/CategoryData";
 import '../MenuStyle.scss'
-import CategoryIcon from "./CategoryIcons";
+import CategoryList from "./CategoryList";
 
 const MenuOptionsOne = () => {
 
     const theme = useMantineTheme()
 
     const links = categotyData.map((item) => (
-        <UnstyledButton className={classes.subLink} key={item.title}>
-            <Group wrap="nowrap" align="flex-start">
-                <ThemeIcon size={34} variant="light" radius="md">
-                    {/* <item.icon style={{ width: rem(22), height: rem(22) }} color={theme.colors.blue[6]} /> */}
-                    <CategoryIcon iconType={item.icon1} iconType2={item.icon2} />
-                </ThemeIcon>
-                <div>
-                    <Text size="sm" fw={500}>{item.title}</Text>
-                    <Text size="xs" c="dimmed">{item.description}</Text>
-                </div>
-            </Group>
-        </UnstyledButton>
+     <CategoryList categoryItem={item}/>
     ))
+
     return (
         <>
             <a href="#" className={classes.link}>Inicio</a>
