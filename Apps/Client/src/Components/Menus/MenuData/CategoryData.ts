@@ -28,7 +28,7 @@ import IconAccessory2 from '../../../assets/Icons/Accessories/accesorio_mujer.sv
 
 
 
-export const mockdata = [
+export const categotyData = [
     {
         icon1: IconCasual1,
         icon2: IconCasual2,

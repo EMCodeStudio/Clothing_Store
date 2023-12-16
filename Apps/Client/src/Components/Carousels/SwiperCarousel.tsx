@@ -9,6 +9,7 @@ import { ImageData } from './CarouselData';
 import CoverCarousel from './CarouselParts/CoverCarousel';
 import './CarouselStyle.scss';
 import ImageList from './CarouselParts/ImageList';
+import ScrollDown from './CarouselParts/ScrollDown';
 
 const SwiperCarousel: React.FC = () => {
     const swiperSettings = {
@@ -32,6 +33,7 @@ const SwiperCarousel: React.FC = () => {
                 keyboard={{enabled: true,}}
                 modules={[EffectFade, Autoplay, Pagination, Navigation, Keyboard,]}
                 style={{ ...swiperStyles } as React.CSSProperties}>
+                    <ScrollDown/>
                 {
                     ImageData.map((data) => (
                         < SwiperSlide key={data.id} className='swiper-item' >

@@ -3,11 +3,11 @@
 header {
     @media(max-width: 442px) {
         border-bottom: none !important;
-    }   
+    }
 }
 
 .category-icons {
-    width:28px;
+    width: 28px;
 }
 
 .shop-container-icons {
@@ -73,7 +73,6 @@ header {
     .search-input {
         @extend %flex-centered;
     }
-
 }
 
 .swiper-pagination-bullet {

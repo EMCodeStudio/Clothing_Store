@@ -1,6 +1,6 @@
 import { rem, useMantineTheme } from "@mantine/core"
 import { IconBell, IconShoppingBag, IconTruck } from "@tabler/icons-react"
-import { CartButton, NotifyButton, ShippingButton } from "../../Styled/Buttons/NotifyShippingCartButtons"
+import { CartButton, CountBadge, NotifyButton, ShippingButton } from "../../Styled/Buttons/NotifyShippingCartButtons"
 import '../MenuStyle.scss'
 
 const NotifyShippingCartOptions = () => {
@@ -18,6 +18,7 @@ const NotifyShippingCartOptions = () => {
             color={theme.colors.yellow[6]}
             stroke={2}
           />
+           <CountBadge $badgeColor={theme.colors.orange[4]}>5</CountBadge>
         </NotifyButton>
 
         <ShippingButton>
@@ -34,6 +35,7 @@ const NotifyShippingCartOptions = () => {
             color={theme.colors.blue[6]}
             stroke={2}
           />
+          <CountBadge $badgeColor={theme.colors.blue[6]}>5</CountBadge>
         </CartButton>
 
       </div>

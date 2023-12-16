@@ -2,21 +2,19 @@ import { Box, Center, Collapse, Group, Text, ThemeIcon, UnstyledButton, rem, use
 import { IconChevronDown } from "@tabler/icons-react"
 import classes from '../HeaderMegaMenu.module.css';
 import { useDisclosure } from "@mantine/hooks";
-import { mockdata } from "../MenuData/MenuData";
-
-
+import { categotyData } from "../MenuData/CategoryData";
 
 
 const MenuOptionsTwo = () => {
+    
     const theme = useMantineTheme();
     const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
 
-
-    const links = mockdata.map((item) => (
+    const links = categotyData.map((item) => (
         <UnstyledButton className={classes.subLink} key={item.title}>
             <Group wrap="nowrap" align="flex-start">
                 <ThemeIcon size={34} variant="default" radius="md">
-                    <item.icon style={{ width: rem(22), height: rem(22) }} color={theme.colors.blue[6]} />
+                 {/*    <item.icon style={{ width: rem(22), height: rem(22) }} color={theme.colors.blue[6]} /> */}
                 </ThemeIcon>
                 <div>
                     <Text size="sm" fw={500}>
