@@ -118,6 +118,7 @@
 
 - Logo *
 - Menu Options *
+- Double Category Hover Icon *
 - Search Field *
 - Profile Options + Favorite *
 - Social Icons Links *
